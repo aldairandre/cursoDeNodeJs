@@ -19,5 +19,5 @@ app.get('/pag4',function(req,res){
 })
 
 app.listen(8081,function(){
-    console.log('Servidor rodando na url http://localhost:8082');
+    console.log('Servidor rodando na url http://localhost:8081');
 })
