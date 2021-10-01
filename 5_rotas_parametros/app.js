@@ -2,6 +2,8 @@ const express = require('express')
 
 const app = express()
 
+//Rotas 
+
 app.get('/',function(req,res){
     res.send('Bem vindo a minha rota inicial')
 })
