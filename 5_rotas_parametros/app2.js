@@ -9,15 +9,8 @@ app.get('/ola/:nome/:idade',function(req,res){
     const nome = String(req.params['nome'])
     const idade = parseInt(req.params['idade'])
 
-    //Analizando parametros
-    if( nome.toUpperCase === 'Aldair'.toUpperCase && idade === 18){
-        
-        res.send(`Seja Bem-vindo de volta ${nome} voce tem ${idade} anos`)
-        
-    }else{
-        res.send(`Ola ${req.params['nome']} voce tem ${req.params['idade']} anos`)
-    }
-
+    //resposta da requisicao
+        res.send(`Seja Bem-vindo ${nome} voce tem ${idade} anos`)
 })
 
 app.listen(8081,function(){
