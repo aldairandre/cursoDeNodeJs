@@ -1,0 +1,1 @@
+DELETE FROM usuarios WHERE nome = 'Aldair Andre'; --comando parar apagar u registro em uma tabela
