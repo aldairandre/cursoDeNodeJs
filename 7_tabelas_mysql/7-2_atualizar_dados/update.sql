@@ -1,0 +1,1 @@
+UPDATE usuarios SET nome = 'Aldair Andre' WHERE nome = 'Aldair Dos Santos'; -- Atualiza o nome de uma tabela, e possivel atualizar mais de uma categotria passando uma figula no final
