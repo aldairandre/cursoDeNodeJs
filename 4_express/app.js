@@ -7,5 +7,5 @@ app.get('/',function(req,res){
 })
 
 app.listen(8080,function(){
-    console.log('Servidor rodando na url http://localhost:8082');
+    console.log('Servidor rodando na url http://localhost:8080');
 })
