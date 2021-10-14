@@ -1,7 +1,6 @@
 const express = require('express')
 const app = express()
 const handlebars = require('express-handlebars')
-const Sequelize = require('sequelize')
 const bodyParse = require('body-parser')
 
 
@@ -17,18 +16,6 @@ const bodyParse = require('body-parser')
 
         app.use(bodyParse.urlencoded({extended: false}))
         app.use(bodyParse.json())
-
-    //BD
-        const sequelize = new Sequelize('teste','root','tuayaniIsabel1',{
-            host: 'localhost',
-            dialect : 'mysql'
-        })
-        
-        sequelize.authenticate().then(() =>{
-            console.warn('Conectado a DB')
-        }).catch((erro) => {
-            console.warn('Falha ao se conectado a DB \n'+erro)
-        })
 app.get('/cad',(req,res) => {
     res.render('formulario')
 })
