@@ -2,6 +2,7 @@ const express = require('express')
 const app = express()
 const handlebars = require('express-handlebars')
 const bodyParse = require('body-parser')
+const Post = require('./models/Posts')
 
 
 //config
@@ -16,13 +17,26 @@ const bodyParse = require('body-parser')
 
         app.use(bodyParse.urlencoded({extended: false}))
         app.use(bodyParse.json())
+
+app.get('/',(req,res) => {
+    res.render('home')
+})
+
 app.get('/cad',(req,res) => {
     res.render('formulario')
 })
 
 app.post('/add',(req,res) => {
+    Post.create({
+        titulo : req.body.titulo,
+        conteudo : req.body.titulo
+    }).then(() => {
+        res.redirect('/')
+    }).catch((erro) => {
+        res.send('Houve um erro' + erro)
+    })
     //res.send('Formulario Recebido')
-    res.send(`Texto: ${req.body.titulo} Conteudo: ${req.body.conteudo}`)
+    //res.send(`Texto: ${req.body.titulo} Conteudo: ${req.body.conteudo}`)
 })
 
 
