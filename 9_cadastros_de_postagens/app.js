@@ -14,12 +14,15 @@ const Post = require('./models/Posts')
         app.set('view engine', 'handlebars')
 
     //Body Parse
-
         app.use(bodyParse.urlencoded({extended: false}))
         app.use(bodyParse.json())
 
+//ROTAS
+
 app.get('/',(req,res) => {
-    res.render('home')
+    Post.findAll().then(function(posts){
+        res.render('home',{posts: posts})
+    })// pegando  todos os dados de uma tabela
 })
 
 app.get('/cad',(req,res) => {
