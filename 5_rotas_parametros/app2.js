@@ -6,11 +6,10 @@ const app = express()
 
 app.get('/ola/:nome/:idade',function(req,res){
     //Guardando parametros
-    const nome = String(req.params['nome'])
-    const idade = parseInt(req.params['idade'])
+    const {nome,idade} = req.params
 
     //resposta da requisicao
-        res.send(`Seja Bem-vindo ${nome} voce tem ${idade} anos`)
+    res.send(`<h1>Seja Bem-vindo ${nome} voce tem ${idade} anos</h1>`)
 })
 
 app.listen(8080,function(){
