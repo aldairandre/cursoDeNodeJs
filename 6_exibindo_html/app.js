@@ -27,6 +27,6 @@ app.get('/redes',function(req,res){
     res.send('<h1>Pagina em atualizacao')
 })
 
-app.listen(8081,function(){
-    console.log('Servidor rodando na url http://localhost:8081');
+app.listen(8080,function(){
+    console.log('Servidor rodando na url http://localhost:8080');
 })
