@@ -3,6 +3,7 @@ const express = require('express');
 const app = express()
 
 //Parametros em uma url 
+app.use(express.static('public'))
 
 app.get('/',function(req,res){
     //Enviando pagina html
@@ -24,7 +25,7 @@ app.get('/sobre',function(req,res){
 })
 
 app.get('/redes',function(req,res){
-    res.send('<h1>Pagina em atualizacao')
+    res.send('<h1>Pagina em atualizacao</h1>')
 })
 
 app.listen(8080,function(){
