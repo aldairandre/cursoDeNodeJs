@@ -9,7 +9,7 @@ app.get('/',function(req,res){
     //Enviando pagina html
     //__dirname retorna o diretorio raiz do app
     
-    res.sendFile(__dirname + '/html/index.html')
+    res.sendFile(__dirname + '/public/html/index.html')
 })
 
 
@@ -17,11 +17,11 @@ app.get('/index',function(req,res){
     //Enviando pagina html
     //__dirname retorna o diretorio raiz do app
     
-    res.sendFile(__dirname + '/html/index.html')
+    res.sendFile(__dirname + '/public/html/index.html')
 })
 
 app.get('/sobre',function(req,res){
-    res.sendFile(__dirname + '/html/sobre.html')
+    res.sendFile(__dirname + '/public/html/sobre.html')
 })
 
 app.get('/redes',function(req,res){
